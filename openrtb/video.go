@@ -30,7 +30,7 @@ type Video struct {
 	MaxExtended    int             `json:"maxextended,omitempty"`    // Maximum extended video ad duration
 	MinBitrate     int             `json:"minbitrate,omitempty"`     // Minimum bit rate in Kbps
 	MaxBitrate     int             `json:"maxbitrate,omitempty"`     // Maximum bit rate in Kbps
-	BoxingAllowed  int             `json:"boxingallowed,omitempty"`  // If exchange publisher has rules preventing letter boxing
+	BoxingAllowed  *int            `json:"boxingallowed,omitempty"`  // If exchange publisher has rules preventing letter boxing
 	PlaybackMethod []int           `json:"playbackmethod,omitempty"` // List of allowed playback methods
 	Delivery       []int           `json:"delivery,omitempty"`       // List of supported delivery methods
 	Pos            int             `json:"pos,omitempty"`            // Ad Position
