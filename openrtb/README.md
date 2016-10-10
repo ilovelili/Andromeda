@@ -1,9 +1,7 @@
 # OpenRTB v2.4
 
-[Build Status]
-<!--
-[![Build Status](https://travis-ci.org/ilovelili/Andromeda/openrtb.svg?branch=master)](https://travis-ci.org/ilovelili/Andromeda/openrtb)
--->
+[![Build Status](https://travis-ci.org/ilovelili/Andromeda.svg?branch=master)](https://travis-ci.org/ilovelili/Andromeda/openrtb)
+
 OpenRTB implementation for Go
 
 ## Installation
