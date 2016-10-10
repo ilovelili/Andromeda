@@ -56,3 +56,32 @@ func (v *Video) GetBoxingAllowed() int {
 	}
 	return 1
 }
+
+type jsonVideo Video
+
+// MarshalJSON custom marshalling with normalization
+func (v *Video) MarshalJSON() ([]byte, error) {
+	v.normalize()
+	return json.Marshal((*jsonVideo)(v))
+}
+
+// UnmarshalJSON custom unmarshalling with normalization
+func (v *Video) UnmarshalJSON(data []byte) error {
+	var h jsonVideo
+	if err := json.Unmarshal(data, &h); err != nil {
+		return err
+	}
+
+	*v = (Video)(h)
+	v.normalize()
+	return nil
+}
+
+func (v *Video) normalize() {
+	if v.Sequence == 0 {
+		v.Sequence = 1
+	}
+	if v.Linearity == 0 {
+		v.Linearity = VideoLinearityLinear
+	}
+}

@@ -19,7 +19,7 @@ type Banner struct {
 	ID       string          `json:"id,omitempty"`       // A unique identifier
 	BType    []int           `json:"btype,omitempty"`    // Blocked creative types
 	BAttr    []int           `json:"battr,omitempty"`    // Blocked creative attributes
-	Pos      int             `json:"pos,omitempty"`      // Ad Position
+	Position int             `json:"pos,omitempty"`      // Ad Position
 	Mimes    []string        `json:"mimes,omitempty"`    // Whitelist of content MIME types supported
 	TopFrame int             `json:"topframe,omitempty"` // Default: 0 ("1": Delivered in top frame, "0": Elsewhere)
 	ExpDir   []int           `json:"expdir,omitempty"`   // Specify properties for an expandable ad
